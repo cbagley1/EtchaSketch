@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    max-width: 500px;
+    min-height: 500px;
+    margin: 2rem auto;
+    border: 1px solid 
+  }
+  
+/*.grid-element {
+    background-color: rgb(89, 178, 230);
+  }*/
+
+#size-button {
+    margin: auto;
+    background-color:rgb(89, 178, 230);
+    color: blue;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+}
+
+#size-button:hover {
+    background-color: rgb(50, 94, 214);
+    font-size: 20px;
+
+}
