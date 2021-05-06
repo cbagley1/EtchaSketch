@@ -10,17 +10,20 @@
     background-color: rgb(89, 178, 230);
   }*/
 
-#size-button {
+.button {
     margin: auto;
     background-color:rgb(89, 178, 230);
     color: blue;
     font-size: 16px;
-    position: absolute;
+    display: flex;
+    justify-content: center;
     left: 50%;
+    width: 200px;
 }
 
-#size-button:hover {
+.button:hover {
     background-color: rgb(50, 94, 214);
     font-size: 20px;
+    color: white;
 
 }

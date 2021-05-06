@@ -1,12 +1,15 @@
 const gridContainer = document.querySelector("#grid-contain");
 const sizeButton = document.querySelector("#size-button");
 const colorButtton = document.querySelector("#color-button");
+const eraserButton = document.querySelector("#eraser-button");
 
 window.addEventListener("load", setDefaultGrid);
 
 sizeButton.addEventListener("click", changeDefaultGrid);
 
 colorButtton.addEventListener("click", changePenColor);
+
+eraserButton.addEventListener("click", changePenType);
 
 
 function setDefaultGrid() {
@@ -28,9 +31,10 @@ function fillGrid(size) {
       gridContainer.appendChild(gridElement);
     }
   }
-
+  let penColor = "Blue"
   function changeColor(e) {
-    e.target.style.backgroundColor = "Blue";
+
+    e.target.style.backgroundColor = penColor;
   }
 
   function changeDefaultGrid() {
@@ -46,20 +50,24 @@ function fillGrid(size) {
 
   function changePenColor() {
     let newColor= prompt("Enter a color of your choice")
-    if(newColor="Red"){
-      changeColor(newColor);
-    }else if(newColor="Green"){
-      changeColor(newColor);
-    }else if(newColor="Blue"){
-      changeColor(newColor);
-    }else if(newColor="Yellow"){
-      changeColor(newColor);
-    }else if(newColor="Purple"){
-      changeColor(newColor);
-    }else if(newColor="Orange"){
-      changeColor(newColor);
+    if(newColor=="Red"){
+      penColor = "Red";
+    }else if(newColor=="Green"){
+      penColor = "Green";
+    }else if(newColor=="Blue"){
+      penColor = "Blue";
+    }else if(newColor=="Yellow"){
+      penColor = "Yellow";
+    }else if(newColor=="Purple"){
+      penColor = "Purple";
+    }else if(newColor=="Orange"){
+      penColor = "Orange";
     }else{
       alert("You must choose a compatable color")
-      changePenColor();
-    }
+     changePenColor();
+    } 
+  }
+
+  function changePenType() {
+    penColor = "White";
   }
